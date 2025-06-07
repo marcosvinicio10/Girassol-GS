@@ -89,12 +89,14 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: var(--primary-color-dark);
+    background: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
@@ -128,8 +130,23 @@ body {
 
 /* Products Section */
 .products {
+    position: relative;
     padding: 4rem 2rem;
     background-color: var(--primary-color-light);
+    margin-top: -60px;
+    z-index: 2;
+}
+.products::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color-light) 100%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .products h2 {
@@ -284,7 +301,7 @@ body {
 @media (max-width: 600px) {
     .header {
         width: 100vw;
-        max-width: 100vw;
+        max-width: 90vw;
         left: 50%;
         top: 0;
         transform: translateX(-50%);
@@ -310,7 +327,12 @@ body {
         margin-left: 0.5rem;
     }
     .products {
-        padding: 1rem 0.2rem;
+        padding: 1.5rem 0.2rem;
+        margin-top: -40px;
+    }
+    .products::before {
+        height: 40px;
+        top: -40px;
     }
     .products-grid {
         grid-template-columns: 1fr;
