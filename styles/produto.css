@@ -2,7 +2,7 @@
 :root {
     --primary-color: #FFD600;
     --primary-color-dark: #FFC400;
-    --secondary-red: #FF6B6B;
+    --secondary-green: #3B5D3A; /* Verde musgo escuro */
     --secondary-blue: #A5D8FF;
 }
 
@@ -34,6 +34,7 @@
 .produto-galeria {
     display: flex;
     gap: 0.5rem;
+    justify-content: center;
 }
 .produto-galeria img {
     width: 60px;
@@ -45,7 +46,7 @@
     transition: border 0.2s;
 }
 .produto-galeria img.selected {
-    border: 2px solid var(--secondary-red);
+    border: 2px solid var(--secondary-green);
 }
 .produto-info {
     flex: 2 1 350px;
@@ -57,7 +58,7 @@
 .produto-titulo {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--secondary-red);
+    color: var(--secondary-green);
 }
 .produto-preco {
     font-size: 1.5rem;
@@ -87,7 +88,7 @@
     transition: background 0.2s, color 0.2s;
 }
 .produto-acoes .comprar-btn {
-    background: var(--secondary-red);
+    background: var(--secondary-green);
     color: #fff;
 }
 .produto-acoes .carrinho-btn {
@@ -96,8 +97,8 @@
 }
 .produto-acoes .like-btn {
     background: #fff;
-    color: var(--secondary-red);
-    border: 1.5px solid var(--secondary-red);
+    color: var(--secondary-green);
+    border: 1.5px solid var(--secondary-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +108,7 @@
     padding: 0;
 }
 .produto-acoes .like-btn.liked {
-    background: var(--secondary-red);
+    background: var(--secondary-green);
     color: #fff;
 }
 .produto-avaliacoes {
@@ -147,6 +148,12 @@
         border-radius: 0;
         padding: 0.5rem;
         box-shadow: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .produto-fotos {
+        width: 100%;
+        align-items: center;
     }
     .produto-fotos img {
         max-width: 98vw;
@@ -154,20 +161,29 @@
     }
     .produto-info {
         gap: 0.8rem;
+        width: 100%;
+        min-width: 0;
     }
     .produto-titulo {
         font-size: 1.2rem;
+        text-align: center;
     }
     .produto-preco {
         font-size: 1rem;
+        text-align: center;
     }
     .produto-descricao {
         font-size: 1rem;
+        text-align: center;
+    }
+    .produto-entrega {
+        text-align: center;
     }
     .produto-acoes {
         flex-direction: column;
         gap: 0.7rem;
         align-items: stretch;
+        width: 100%;
     }
     .produto-acoes button, .produto-acoes .like-btn {
         width: 100%;

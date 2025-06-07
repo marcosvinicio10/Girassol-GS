@@ -23,7 +23,38 @@ const products = [
         name: "Cesta de Flores",
         price: 149.90,
         image: "../assets/fotoflor.png"
-    }
+    },
+    {
+        id: 5,
+        name: "Cesta de Flores",
+        price: 149.90,
+        image: "../assets/fotoflor.png"
+    },
+    {
+        id: 6,
+        name: "Cesta de Flores",
+        price: 149.90,
+        image: "../assets/fotoflor.png"
+    },
+    {
+        id: 7,
+        name: "Cesta de Flores",
+        price: 149.90,
+        image: "../assets/fotoflor.png"
+    },
+    {
+        id: 8,
+        name: "Cesta de Flores",
+        price: 149.90,
+        image: "../assets/fotoflor.png"
+    },
+    {
+        id: 9,
+        name: "Cesta de Flores",
+        price: 149.90,
+        image: "../assets/fotoflor.png"
+    },
+    
 ];
 
 // Cart functionality
