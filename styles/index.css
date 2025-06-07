@@ -220,7 +220,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: var(--secondary-purple);
+    background-color: rgb(21, 58, 26);
     color: white;
     padding: 4rem 2rem 1rem;
 }
