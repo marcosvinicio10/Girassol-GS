@@ -53,7 +53,7 @@ function displayProducts() {
         productCard.addEventListener('click', function(e) {
             // Evita conflito com botões internos
             if (e.target.tagName === 'BUTTON') return;
-            window.location.href = 'produto.html';
+            window.location.href = '/src/pages/produto.html';
         });
         productsGrid.appendChild(productCard);
     });

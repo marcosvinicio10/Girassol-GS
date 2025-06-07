@@ -2,7 +2,7 @@
     --primary-color: #FFD600; /* Amarelo mais forte */
     --primary-color-light: #FFF59D; /* Amarelo claro para hover */
     --primary-color-dark: #FFC400; /* Amarelo escuro para contraste */
-    --secondary-red: #FF6B6B;
+    --secondary-green: #3B5D3A; /* Verde musgo escuro */
     --secondary-blue: #A5D8FF;
     --secondary-purple: #B19CD9;
     --text-color: #333;
@@ -19,7 +19,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: #fff;
+    background: var(--primary-color);
 }
 
 /* Glassmorphism Header */
@@ -48,7 +48,7 @@ body {
 }
 
 .logo h1 {
-    color: var(--secondary-red);
+    color: var(--secondary-green);
     font-size: 2rem;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--secondary-red);
+    color: var(--secondary-green);
 }
 
 .cart-icon {
@@ -79,7 +79,7 @@ body {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: var(--secondary-red);
+    background-color: var(--secondary-green);
     color: white;
     border-radius: 50%;
     padding: 0.2rem 0.5rem;
@@ -89,10 +89,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(255, 229, 180, 0.9), rgba(255, 229, 180, 0.9)),
-                url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-position: center;
+    background: var(--primary-color-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +103,7 @@ body {
 
 .hero h2 {
     font-size: 3rem;
-    color: var(--secondary-red);
+    color: var(--secondary-green);
     margin-bottom: 1rem;
 }
 
@@ -118,7 +115,7 @@ body {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--secondary-red);
+    background-color: var(--secondary-green);
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -185,10 +182,11 @@ body {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: var(--secondary-green);
 }
 
 .product-price {
-    color: var(--secondary-red);
+    color: var(--secondary-green);
     font-weight: bold;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -211,7 +209,7 @@ body {
 }
 
 .buy-button {
-    background-color: var(--secondary-red);
+    background-color: var(--secondary-green);
     color: white;
 }
 
@@ -367,7 +365,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--secondary-red);
+    background-color: var(--secondary-green);
     color: white;
     padding: 1rem 2rem;
     border-radius: 5px;
