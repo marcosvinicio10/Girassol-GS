@@ -4,25 +4,25 @@ const products = [
         id: 1,
         name: "Buquê de Rosas",
         price: 89.90,
-        image: "assets/fotoflor.png"
+        image: "../assets/fotoflor.png"
     },
     {
         id: 2,
         name: "Arranjo de Girassóis",
         price: 79.90,
-        image: "assets/fotoflor.png"
+        image: "../assets/fotoflor.png"
     },
     {
         id: 3,
         name: "Orquídea Phalaenopsis",
         price: 129.90,
-        image: "assets/fotoflor.png"
+        image: "../assets/fotoflor.png"
     },
     {
         id: 4,
         name: "Cesta de Flores",
         price: 149.90,
-        image: "assets/fotoflor.png"
+        image: "../assets/fotoflor.png"
     }
 ];
 
@@ -48,6 +48,13 @@ function displayProducts() {
                 </div>
             </div>
         `;
+        // Redireciona ao clicar no card
+        productCard.style.cursor = 'pointer';
+        productCard.addEventListener('click', function(e) {
+            // Evita conflito com botões internos
+            if (e.target.tagName === 'BUTTON') return;
+            window.location.href = 'produto.html';
+        });
         productsGrid.appendChild(productCard);
     });
 }

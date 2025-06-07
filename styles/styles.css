@@ -19,9 +19,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background: #fff;
 }
 
-/* Header Styles */
+/* Glassmorphism Header */
 .header {
     position: fixed;
     top: 20px;
@@ -29,11 +30,14 @@ body {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1200px;
-    background-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.18);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     margin-top: 20px;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1.5px solid rgba(255,255,255,0.25);
 }
 
 .header-content {
@@ -146,11 +150,14 @@ body {
 }
 
 .product-card {
-    background-color: var(--background-color);
+    background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .product-card:hover {
@@ -162,15 +169,22 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .product-info {
     padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .product-price {
@@ -183,6 +197,7 @@ body {
 .product-buttons {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .product-buttons button {
@@ -191,7 +206,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
 .buy-button {
@@ -232,7 +248,7 @@ body {
 .social-icons a {
     color: white;
     font-size: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .social-icons a:hover {
@@ -246,164 +262,103 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsividade */
+@media (max-width: 900px) {
     .header {
-        position: fixed;
-        top: 0;
-        bottom: auto;
+        width: 98vw;
+        max-width: 98vw;
         left: 50%;
+        top: 0;
         transform: translateX(-50%);
-        width: 100%;
-        max-width: 100vw;
-        background-color: var(--primary-color);
-        border-radius: 0 0 20px 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+        border-radius: 0 0 18px 18px;
+        padding: 8px 8px;
     }
-
+    .header-content {
+        padding: 0.5rem 0.5rem;
+    }
+    .products {
+        padding: 2rem 0.5rem;
+    }
+    .products-grid {
+        gap: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .header {
+        width: 100vw;
+        max-width: 100vw;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        border-radius: 0 0 16px 16px;
+        padding: 6px 2vw;
+        min-height: 56px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    }
     .header-content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 1rem;
+        padding: 0;
         gap: 0;
     }
-
-    .logo {
-        display: none;
+    .logo h1 {
+        font-size: 1.1rem;
     }
-
-    .nav-menu {
-        width: auto;
-        flex: 1;
-    }
-
     .nav-menu ul {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 0;
-        background-color: transparent;
-        gap: 0;
+        gap: 0.5rem;
     }
-
-    .nav-menu li {
-        text-align: center;
-    }
-
-    .nav-menu a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem;
-        color: var(--text-color);
-        font-size: 1rem;
-        background: none;
-        border: none;
-    }
-
-    .nav-menu a::before,
-    .nav-menu a[href="#home"]::before,
-    .nav-menu a[href="#produtos"]::before,
-    .nav-menu a[href="#sobre"]::before,
-    .nav-menu a[href="#contato"]::before {
-        display: none !important;
-        content: none !important;
-    }
-
-    .nav-icon {
-        font-size: 1.5rem;
-        display: block;
-        line-height: 1;
-    }
-    .nav-text {
-        display: none;
-    }
-
     .cart-icon {
-        position: static;
-        top: auto;
-        right: auto;
-        background: none;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-        margin-left: 1rem;
-        display: flex;
-        align-items: center;
+        margin-left: 0.5rem;
     }
-    .cart-count {
-        top: -5px;
-        right: -5px;
-    }
-
-    /* Ajuste do conteúdo principal para não ficar sob o header */
-    main {
-        padding-top: 70px;
-        padding-bottom: 0;
-    }
-
-    .hero {
-        height: 80vh;
-        padding-top: 60px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
     .products {
-        padding: 2rem 1rem;
+        padding: 1rem 0.2rem;
     }
-
     .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
     }
-
     .product-card {
+        max-width: 98vw;
         margin: 0 auto;
-        max-width: 300px;
+        min-width: 0;
     }
-
+    .product-image {
+        height: 160px;
+        object-fit: cover;
+    }
     .product-info {
         padding: 1rem;
     }
-
+    .product-title {
+        font-size: 1.1rem;
+    }
+    .product-price {
+        font-size: 1rem;
+    }
     .product-buttons {
         flex-direction: column;
         gap: 0.5rem;
+        margin-top: 0.5rem;
     }
-
     .product-buttons button {
         width: 100%;
+        font-size: 1rem;
+        padding: 0.7rem 0;
     }
-
     .footer {
-        padding: 2rem 1rem 1rem;
+        padding: 2rem 0.5rem 1rem;
     }
-
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 1rem;
     }
-
+    .footer-section h3 {
+        margin-bottom: 0.5rem;
+    }
     .social-icons {
         justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        width: 100vw;
-        border-radius: 0 0 16px 16px;
-    }
-    .nav-icon {
-        font-size: 1.3rem;
     }
 }
 

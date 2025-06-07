@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Produto | Girassol Floricultura</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/produto.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head> 
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="produto-container">
+            <div class="produto-fotos">
+                <img id="mainFoto" src="../assets/fotoflor.png" alt="Foto do Produto">
+                <div class="produto-galeria">
+                    <img src="../assets/fotoflor.png" alt="Foto 1" class="selected" onclick="trocarFoto(this)">
+                    <img src="../assets/fotoflor.png" alt="Foto 2" onclick="trocarFoto(this)">
+                </div>
+            </div>
+            <div class="produto-info">
+                <div class="produto-titulo" id="produtoTitulo">Buquê de Rosas</div>
+                <div class="produto-preco" id="produtoPreco">R$ 89,90</div>
+                <div class="produto-descricao" id="produtoDescricao">
+                    Um buquê de rosas vermelhas frescas, perfeito para presentear quem você ama.
+                </div>
+                <div class="produto-entrega">Entrega estimada: <span id="produtoEntrega">Amanhã</span></div>
+                <div class="produto-acoes">
+                    <button class="comprar-btn">Comprar agora</button>
+                    <button class="carrinho-btn">Adicionar ao carrinho</button>
+                    <button class="like-btn" id="likeBtn" aria-label="Curtir produto"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="produto-avaliacoes">
+                    <h3>Opiniões</h3>
+                    <div class="avaliacao"><span class="estrela">★</span> Lindo buquê, chegou super rápido! <b>- Ana</b></div>
+                    <div class="avaliacao"><span class="estrela">★</span> Flores muito frescas e bem embaladas. <b>- João</b></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/header.js"></script>
+    <script>
+    // Galeria de fotos
+    function trocarFoto(img) {
+        document.getElementById('mainFoto').src = img.src;
+        document.querySelectorAll('.produto-galeria img').forEach(i => i.classList.remove('selected'));
+        img.classList.add('selected');
+    }
+    // Like animado
+    document.getElementById('likeBtn').addEventListener('click', function() {
+        this.classList.toggle('liked');
+        const icon = this.querySelector('i');
+        if(this.classList.contains('liked')) {
+            icon.classList.remove('fa-regular');
+            icon.classList.add('fa-solid');
+        } else {
+            icon.classList.remove('fa-solid');
+            icon.classList.add('fa-regular');
+        }
+    });
+    </script>
+</body>
+</html> 
