@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Girassol Floricultura</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="header"></div>
+    <div id="header-placeholder"></div>
 
     <main>
         <section id="home" class="hero">
+            <img src="assets/girassol.png" alt="Girassol" class="girassol-left" />
+            <img src="assets/girassol.png" alt="Girassol" class="girassol-right" />
             <div class="hero-content">
                 <h2>Bem-vindo à Girassol</h2>
                 <p>Flores que transformam momentos em memórias</p>
@@ -20,12 +23,14 @@
         </section>
 
         <section id="produtos" class="products">
-            <h2>Nossos Produtos</h2>
-            <div class="products-grid">
-                <!-- Produtos serão inseridos via JavaScript -->
+            <h2>Nosso Catálogo</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Os cards serão inseridos aqui via JavaScript -->
             </div>
         </section>
     </main>
+
+    <div id="footer-placeholder"></div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -53,7 +58,32 @@
         </div>
     </footer>
 
-    <script src="controllers/script.js"></script>
+    <script src="controllers/products.js"></script>
+    <script src="controllers/cart.js"></script>
+    <script src="controllers/details.js"></script>
+    <script src="controllers/scroll.js"></script>
     <script src="src/components/header.js"></script>
+    <script src="src/components/ProductCard.js"></script>
+    <script>
+        // Carregar produtos do JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+                const container = document.getElementById('products-container');
+                
+                data.products.forEach(product => {
+                    const card = document.createElement('product-card');
+                    card.setAttribute('product', JSON.stringify(product));
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar produtos:', error);
+            }
+        }
+
+        // Carregar produtos quando a página carregar
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
 </body>
 </html> 

@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Buquê de Rosas Vermelhas",
+      "price": 89.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol"
+    },
+    {
+      "id": 2,
+      "name": "Arranjo de Girassóis",
+      "price": 129.90,
+      "image": "assets/fotoflor.png",
+      "category": "arranjos",
+      "brand": "Girassol"
+      
+    },
+    {
+      "id": 3,
+      "name": "Orquídea Phalaenopsis",
+      "price": 149.90,
+      "image": "assets/fotoflor.png",
+      "category": "plantas",
+      "brand": "Girassol"
+      
+    },
+    {
+      "id": 4,
+      "name": "Cesta de Flores do Campo",
+      "price": 159.90,
+      "image": "assets/fotoflor.png",
+      "category": "cestas",
+      "brand": "Girassol"
+      
+    },
+    {
+      "id": 5,
+      "name": "Vaso de Suculentas",
+      "price": 79.90,
+      "image": "assets/fotoflor.png",
+      "category": "plantas",
+      "brand": "Girassol"
+      
+    },
+    {
+      "id": 6,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol"
+     
+    }
+  ]
+} 

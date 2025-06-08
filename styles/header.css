@@ -1,0 +1,130 @@
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 20px;
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1.5px solid rgba(255,255,255,0.25);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo h1 {
+    color: var(--secondary-green);
+    font-size: 2rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-green);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: var(--secondary-green);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--secondary-green);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+}
+
+/* Responsividade do Header */
+@media (max-width: 900px) {
+    .header {
+        top: 0;
+        width: 90%;
+        border-radius: 30;
+        margin-top: 20px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .header-content {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        border: 1.5px solid rgba(255,255,255,0.25);
+    }
+
+    .header-content {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu ul {
+        gap: 1rem;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-icon {
+        font-size: 1.4rem;
+    }
+
+    .cart-icon {
+        font-size: 1.3rem;
+    }
+} 
