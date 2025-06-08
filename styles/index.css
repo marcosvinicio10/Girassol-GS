@@ -327,3 +327,67 @@ body {
         top: -300px;
     }
 }
+
+#carousels-container {
+    padding: 2rem 0;
+}
+
+.carousel-section {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    text-transform: capitalize;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel.active {
+    cursor: grabbing;
+}
+
+.carousel-content {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+
+.carousel-content product-card {
+    flex: 0 0 auto;
+    width: 300px;
+    white-space: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .category-title {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .carousel-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .carousel-content product-card {
+        width: 250px;
+    }
+}

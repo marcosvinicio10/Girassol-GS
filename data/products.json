@@ -59,6 +59,67 @@
       "brand": "Girassol",
       "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
       "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 7,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 8,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 9,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 10,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 11,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
+    },
+    {
+      "id": 12,
+      "name": "Buquê de Orquídeas",
+      "price": 199.90,
+      "image": "assets/fotoflor.png",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
     }
+
   ]
 } 

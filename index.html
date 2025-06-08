@@ -27,8 +27,8 @@
 
         <section id="produtos" class="products">
             <h2>Nosso Catálogo</h2>
-            <div class="products-grid" id="products-container">
-                <!-- Os cards serão inseridos aqui via JavaScript -->
+            <div id="carousels-container">
+                <!-- Os carrosséis serão inseridos aqui via JavaScript -->
             </div>
         </section>
     </main>
@@ -73,19 +73,83 @@
             try {
                 const response = await fetch('data/products.json');
                 const data = await response.json();
-                const container = document.getElementById('products-container');
+                const container = document.getElementById('carousels-container');
                 
+                // Agrupar produtos por categoria
+                const productsByCategory = {};
                 data.products.forEach(product => {
-                    const card = document.createElement('product-card');
-                    card.setAttribute('id', product.id);
-                    card.setAttribute('name', product.name);
-                    card.setAttribute('price', product.price);
-                    card.setAttribute('image', product.image);
-                    card.setAttribute('brand', product.brand);
-                    card.setAttribute('description', product.description);
-                    card.setAttribute('production-time', product.productionTime);
-                    container.appendChild(card);
+                    if (!productsByCategory[product.category]) {
+                        productsByCategory[product.category] = [];
+                    }
+                    productsByCategory[product.category].push(product);
                 });
+
+                // Criar carrossel para cada categoria
+                Object.entries(productsByCategory).forEach(([category, products]) => {
+                    const carouselSection = document.createElement('section');
+                    carouselSection.className = 'carousel-section';
+                    
+                    const categoryTitle = document.createElement('h2');
+                    categoryTitle.className = 'category-title';
+                    // Capitalizar primeira letra da categoria
+                    categoryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                    carouselSection.appendChild(categoryTitle);
+
+                    const carousel = document.createElement('div');
+                    carousel.className = 'carousel';
+                    
+                    const carouselContent = document.createElement('div');
+                    carouselContent.className = 'carousel-content';
+                    
+                    products.forEach(product => {
+                        const card = document.createElement('product-card');
+                        card.setAttribute('id', product.id);
+                        card.setAttribute('name', product.name);
+                        card.setAttribute('price', product.price);
+                        card.setAttribute('image', product.image);
+                        card.setAttribute('brand', product.brand);
+                        card.setAttribute('description', product.description);
+                        card.setAttribute('production-time', product.productionTime);
+                        carouselContent.appendChild(card);
+                    });
+
+                    carousel.appendChild(carouselContent);
+                    carouselSection.appendChild(carousel);
+                    container.appendChild(carouselSection);
+                });
+
+                // Inicializar scroll horizontal para cada carrossel
+                document.querySelectorAll('.carousel').forEach(carousel => {
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+
+                    carousel.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        carousel.classList.add('active');
+                        startX = e.pageX - carousel.offsetLeft;
+                        scrollLeft = carousel.scrollLeft;
+                    });
+
+                    carousel.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        carousel.classList.remove('active');
+                    });
+
+                    carousel.addEventListener('mouseup', () => {
+                        isDown = false;
+                        carousel.classList.remove('active');
+                    });
+
+                    carousel.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - carousel.offsetLeft;
+                        const walk = (x - startX) * 2;
+                        carousel.scrollLeft = scrollLeft - walk;
+                    });
+                });
+
             } catch (error) {
                 console.error('Erro ao carregar produtos:', error);
             }
