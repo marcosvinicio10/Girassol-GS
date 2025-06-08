@@ -6,7 +6,9 @@
       "price": 89.90,
       "image": "assets/fotoflor.png",
       "category": "buques",
-      "brand": "Girassol"
+      "brand": "Girassol",
+      "description": "Um lindo buquê de rosas vermelhas frescas, perfeito para presentear quem você ama. As rosas são cuidadosamente selecionadas e arranjadas para criar um visual impactante e romântico.",
+      "productionTime": "2 horas"
     },
     {
       "id": 2,
@@ -14,8 +16,9 @@
       "price": 129.90,
       "image": "assets/fotoflor.png",
       "category": "arranjos",
-      "brand": "Girassol"
-      
+      "brand": "Girassol",
+      "description": "Arranjo vibrante com girassóis frescos, trazendo alegria e energia para qualquer ambiente. Os girassóis são combinados com folhagens verdes para criar um contraste natural e harmonioso.",
+      "productionTime": "1 hora e 30 minutos"
     },
     {
       "id": 3,
@@ -23,8 +26,9 @@
       "price": 149.90,
       "image": "assets/fotoflor.png",
       "category": "plantas",
-      "brand": "Girassol"
-      
+      "brand": "Girassol",
+      "description": "Elegante orquídea Phalaenopsis em vaso decorativo. Esta espécie é conhecida por sua beleza e durabilidade, florescendo por vários meses e trazendo sofisticação ao ambiente.",
+      "productionTime": "1 hora"
     },
     {
       "id": 4,
@@ -32,8 +36,9 @@
       "price": 159.90,
       "image": "assets/fotoflor.png",
       "category": "cestas",
-      "brand": "Girassol"
-      
+      "brand": "Girassol",
+      "description": "Encantadora cesta com uma variedade de flores do campo, criando um visual rústico e acolhedor. Inclui flores sazonais e folhagens naturais, perfeita para decorar ou presentear.",
+      "productionTime": "2 horas e 30 minutos"
     },
     {
       "id": 5,
@@ -41,8 +46,9 @@
       "price": 79.90,
       "image": "assets/fotoflor.png",
       "category": "plantas",
-      "brand": "Girassol"
-      
+      "brand": "Girassol",
+      "description": "Conjunto de suculentas em vaso decorativo. Plantas fáceis de cuidar e que trazem um toque de natureza para qualquer espaço. Ideal para quem busca praticidade sem abrir mão da beleza.",
+      "productionTime": "45 minutos"
     },
     {
       "id": 6,
@@ -50,8 +56,9 @@
       "price": 199.90,
       "image": "assets/fotoflor.png",
       "category": "buques",
-      "brand": "Girassol"
-     
+      "brand": "Girassol",
+      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
+      "productionTime": "2 horas e 15 minutos"
     }
   ]
 } 

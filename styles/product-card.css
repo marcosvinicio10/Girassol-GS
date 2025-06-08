@@ -1,3 +1,105 @@
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background: #45a049;
+}
+
+.cart-btn {
+  background: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cart-btn:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.favorite-checkbox {
+  display: none;
+}
+
+.favorite-label {
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.favorite-checkbox:checked + .favorite-label {
+  color: #ff4444;
+}
+
+.favorite-label i {
+  font-size: 1.2rem;
+}
+
 .card {
   --accent-color: #ffd426;
   position: relative;
@@ -57,14 +159,14 @@
 
 .card .favorite svg {
   fill: none;
-  stroke: #666;
+  stroke: #004424;
   stroke-width: 2;
   transition: all 0.3s ease;
 }
 
 .card .favorite input:checked + svg {
-  fill: var(--accent-color);
-  stroke: var(--accent-color);
+  fill: rgb(255, 0, 0);
+  stroke: rgb(255, 0, 0);
 }
 
 .card .content {
@@ -74,7 +176,7 @@
 
 .card .content .brand {
   font-weight: 900;
-  color: #a6a6a6;
+  color: #0f3824;
 }
 
 .card .content .product-name {
@@ -144,7 +246,7 @@
 }
 
 .card .content .color-size-container .colors .colors-container .color:first-child a {
-  border-color: #ffd426;
+  border-color: #ff2626;
 }
 
 .card .content .color-size-container .colors .colors-container .color:nth-child(2) a {
@@ -185,7 +287,7 @@
 }
 
 .card .content .color-size-container .sizes .size-container .size .size-radio input:checked ~ .name {
-  background: var(--accent-color);
+  background: rgb(255, 0, 0);
   border-radius: 2rem 2rem 1.5rem 1.5rem;
   color: white;
 }

@@ -108,7 +108,7 @@
     padding: 0;
 }
 .produto-acoes .like-btn.liked {
-    background: var(--secondary-green);
+    background: rgb(255, 0, 0);
     color: #fff;
 }
 .produto-avaliacoes {
@@ -450,4 +450,21 @@
   75% {
     transform: scale(1.5, 2.05);
   }
+}
+
+.produto-tempo {
+    margin: 1rem 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.produto-tempo i {
+    color: var(--secondary-green);
+}
+
+.produto-tempo span {
+    font-weight: 500;
 } 

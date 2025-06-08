@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head> 
 <body>
-    <div id="header"></div>
+    <header-component></header-component>
     <main>
         <div class="produto-container">
             <div class="produto-fotos">
@@ -26,39 +26,70 @@
                 <div class="produto-descricao" id="produtoDescricao">
                     Um buquê de rosas vermelhas frescas, perfeito para presentear quem você ama.
                 </div>
-                <div class="produto-entrega">Entrega estimada: <span id="produtoEntrega">Amanhã</span></div>
+                <div class="produto-tempo">
+                    <i class="fas fa-clock"></i>
+                    Tempo de produção: <span id="produtoTempo">2 horas</span>
+                </div>
                 <div class="produto-acoes">
                     <button class="comprar-btn">Comprar agora</button>
                     <button class="carrinho-btn">Adicionar ao carrinho</button>
                     <button class="like-btn" id="likeBtn" aria-label="Curtir produto"><i class="fa-regular fa-heart"></i></button>
-                </div>
-                <div class="produto-avaliacoes">
-                    <h3>Opiniões</h3>
-                    <div class="avaliacao"><span class="estrela">★</span> Lindo buquê, chegou super rápido! <b>- Ana</b></div>
-                    <div class="avaliacao"><span class="estrela">★</span> Flores muito frescas e bem embaladas. <b>- João</b></div>
                 </div>
             </div>
         </div>
     </main>
     <script src="../../src/components/header.js"></script>
     <script>
-    // Galeria de fotos
-    function trocarFoto(img) {
-        document.getElementById('mainFoto').src = img.src;
-        document.querySelectorAll('.produto-galeria img').forEach(i => i.classList.remove('selected'));
-        img.classList.add('selected');
-    }
-    // Like animado
-    document.getElementById('likeBtn').addEventListener('click', function() {
-        this.classList.toggle('liked');
-        const icon = this.querySelector('i');
-        if(this.classList.contains('liked')) {
-            icon.classList.remove('fa-regular');
-            icon.classList.add('fa-solid');
-        } else {
-            icon.classList.remove('fa-solid');
-            icon.classList.add('fa-regular');
+    document.addEventListener('DOMContentLoaded', () => {
+        const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+        
+        if (selectedProduct) {
+            document.title = `${selectedProduct.name} - Girassol Garden Shop`;
+            document.getElementById('produtoTitulo').textContent = selectedProduct.name;
+            document.getElementById('produtoPreco').textContent = `R$ ${selectedProduct.price.toFixed(2)}`;
+            document.getElementById('produtoDescricao').textContent = selectedProduct.description;
+            document.getElementById('produtoTempo').textContent = selectedProduct.productionTime;
+            
+            // Atualizar imagens
+            document.querySelector('.produto-imagem-principal img').src = selectedProduct.image;
+            document.querySelector('.produto-imagem-principal img').alt = selectedProduct.name;
+            
+            // Adicionar evento para o botão de comprar
+            document.querySelector('.comprar-btn').addEventListener('click', () => {
+                adicionarAoCarrinho(selectedProduct);
+            });
         }
+    });
+
+    function adicionarAoCarrinho(produto) {
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        
+        // Verificar se o produto já está no carrinho
+        const produtoExistente = carrinho.find(item => item.id === produto.id);
+        
+        if (produtoExistente) {
+            produtoExistente.quantidade++;
+        } else {
+            carrinho.push({
+                ...produto,
+                quantidade: 1
+            });
+        }
+        
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        
+        // Mostrar mensagem de sucesso
+        alert('Produto adicionado ao carrinho!');
+    }
+
+    // Função para trocar a imagem principal
+    function trocarImagem(imagem) {
+        document.querySelector('.produto-imagem-principal img').src = imagem;
+    }
+
+    // Evento para o botão de like
+    document.querySelector('.like-btn').addEventListener('click', function() {
+        this.classList.toggle('active');
     });
     </script>
 </body>

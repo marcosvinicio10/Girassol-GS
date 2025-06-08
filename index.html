@@ -74,7 +74,13 @@
                 
                 data.products.forEach(product => {
                     const card = document.createElement('product-card');
-                    card.setAttribute('product', JSON.stringify(product));
+                    card.setAttribute('id', product.id);
+                    card.setAttribute('name', product.name);
+                    card.setAttribute('price', product.price);
+                    card.setAttribute('image', product.image);
+                    card.setAttribute('brand', product.brand);
+                    card.setAttribute('description', product.description);
+                    card.setAttribute('production-time', product.productionTime);
                     container.appendChild(card);
                 });
             } catch (error) {

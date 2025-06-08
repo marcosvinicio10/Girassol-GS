@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Girassol Garden Shop</title>
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="carrinho-container">
+        <h1>Meu Carrinho</h1>
+        
+        <div class="carrinho-content">
+            <div class="carrinho-items">
+                <!-- Items serão inseridos aqui via JavaScript -->
+            </div>
+
+            <div class="carrinho-resumo">
+                <h2>Resumo do Pedido</h2>
+                <div class="resumo-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="resumo-item">
+                    <span>Frete</span>
+                    <span id="frete">R$ 0,00</span>
+                </div>
+                <div class="resumo-item total">
+                    <span>Total</span>
+                    <span id="total">R$ 0,00</span>
+                </div>
+                <button class="finalizar-compra-btn">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <div class="carrinho-vazio" style="display: none;">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Seu carrinho está vazio</h2>
+            <p>Adicione produtos para continuar comprando</p>
+            <a href="../../index.html" class="voltar-btn">Voltar para a loja</a>
+        </div>
+    </main>
+
+    <script src="../../controllers/header.js"></script>
+    <script src="../../controllers/carrinho.js"></script>
+</body>
+</html> 
