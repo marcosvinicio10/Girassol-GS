@@ -5,6 +5,7 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+  border: 1px solid #11351b;
 }
 
 .product-card:hover {
@@ -13,10 +14,15 @@
 }
 
 .product-image {
-  width: 100%;
+  width: 92%;
   height: 200px;
   object-fit: cover;
   cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 30px;
+  margin-left: 12px;
+  margin-top: 10px;
 }
 
 .product-info {
@@ -51,20 +57,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.buy-btn {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.buy-btn:hover {
-  background: #45a049;
 }
 
 .cart-btn {
@@ -383,6 +375,7 @@
 
   .card .image-container {
     height: 180px;
+    margin-right: 2px;
   }
 
   .card .content .product-name {
@@ -396,5 +389,60 @@
   .card .button-container .button {
     padding: 0.7rem 0;
     font-size: 0.9rem;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #181717;
+}
+
+.button:hover svg path {
+  fill: #181717;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 8px 12px;
+    gap: 8px;
+    scale: 0,5;
+  }
+
+  .button .text {
+    font-size: 0.7em;
+  }
+
+  .button svg {
+    height: 12px;
+    width: 12px;
   }
 } 

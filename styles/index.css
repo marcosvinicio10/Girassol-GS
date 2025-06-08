@@ -280,3 +280,50 @@ body {
         opacity: 1;
     }
 }
+
+.top-decoration {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: -20px;
+}
+
+.mato-decoration {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+   
+}
+
+@media screen and (min-width: 768px) {
+    .top-decoration {
+        height: 30px;
+        margin-bottom: -10px;
+    }
+    .top-decoration {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        overflow: visible;
+        margin-bottom: -20px;
+    }
+    
+    .mato-decoration {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10002;
+        scale: 1;
+        top: -300px;
+    }
+}
