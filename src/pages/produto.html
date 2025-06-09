@@ -49,66 +49,31 @@
     </main>
     <script src="../../src/components/header.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
-        
-        if (selectedProduct) {
-            document.title = `${selectedProduct.name} - Girassol Garden Shop`;
-            document.getElementById('produtoTitulo').textContent = selectedProduct.name;
-            document.getElementById('produtoPreco').textContent = `R$ ${selectedProduct.price.toFixed(2)}`;
-            document.getElementById('produtoDescricao').textContent = selectedProduct.description;
-            document.getElementById('produtoTempo').textContent = selectedProduct.productionTime;
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
             
-            // Atualizar imagens
-            document.querySelector('.produto-imagem-principal img').src = selectedProduct.image;
-            document.querySelector('.produto-imagem-principal img').alt = selectedProduct.name;
-            
-            // Adicionar evento para o botão de comprar
-            document.querySelector('.comprar-btn').addEventListener('click', () => {
-                adicionarAoCarrinho(selectedProduct);
-            });
+            if (selectedProduct) {
+                // Corrigir o caminho da imagem
+                const imagePath = selectedProduct.image.replace('assets/', '../../assets/');
+                
+                // Atualizar informações básicas
+                document.getElementById('mainFoto').src = imagePath;
+                document.getElementById('produtoTitulo').textContent = selectedProduct.name;
+                document.getElementById('produtoPreco').textContent = `R$ ${selectedProduct.price.toFixed(2)}`;
+                document.getElementById('produtoDescricao').textContent = selectedProduct.description;
+                document.getElementById('produtoTempo').textContent = selectedProduct.productionTime;
 
-            // Adicionar evento para o botão de adicionar ao carrinho
-            document.querySelector('.carrinho-btn').addEventListener('click', () => {
-                adicionarAoCarrinho(selectedProduct, true);
-            });
+                // Atualizar galeria
+                const galeria = document.querySelector('.produto-galeria');
+                galeria.innerHTML = `<img src="${imagePath}" alt="Foto 1" class="selected" onclick="trocarFoto(this)">`;
+            }
+        });
+
+        function trocarFoto(img) {
+            document.getElementById('mainFoto').src = img.src;
+            document.querySelectorAll('.produto-galeria img').forEach(i => i.classList.remove('selected'));
+            img.classList.add('selected');
         }
-    });
-
-    function adicionarAoCarrinho(produto, irParaCarrinho = false) {
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        
-        // Verificar se o produto já está no carrinho
-        const produtoExistente = carrinho.find(item => item.id === produto.id);
-        
-        if (produtoExistente) {
-            produtoExistente.quantidade++;
-        } else {
-            carrinho.push({
-                ...produto,
-                quantidade: 1
-            });
-        }
-        
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        
-        if (irParaCarrinho) {
-            window.location.href = '../../src/pages/carrinho.html';
-        } else {
-            // Mostrar mensagem de sucesso
-            alert('Produto adicionado ao carrinho!');
-        }
-    }
-
-    // Função para trocar a imagem principal
-    function trocarImagem(imagem) {
-        document.querySelector('.produto-imagem-principal img').src = imagem;
-    }
-
-    // Evento para o botão de like
-    document.querySelector('.like-btn').addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
     </script>
 </body>
 </html> 
