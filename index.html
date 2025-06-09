@@ -27,6 +27,26 @@
 
         <section id="produtos" class="products">
             <h2>Nosso Catálogo</h2>
+            <div class="category-buttons">
+                <div class="category-item">
+                    <button class="category-btn" data-category="burgue">
+                        <img src="assets/buguersBotao.png" alt="Buquês">
+                    </button>
+                    <span class="category-name">Buquês</span>
+                </div>
+                <div class="category-item">
+                    <button class="category-btn" data-category="caixa">
+                        <img src="assets/bombombotao.png" alt="Caixas">
+                    </button>
+                    <span class="category-name">Caixas</span>
+                </div>
+                <div class="category-item">
+                    <button class="category-btn" data-category="unidade">
+                        <img src="assets/unidadeBotao.png" alt="Unidades">
+                    </button>
+                    <span class="category-name">Unidades</span>
+                </div>
+            </div>
             <div id="carousels-container">
                 <!-- Os carrosséis serão inseridos aqui via JavaScript -->
             </div>
@@ -38,7 +58,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Girassol Floricultura</h3>
+                <h3>Girassol GS</h3>
                 <p>Transformando momentos em memórias com as mais belas flores.</p>
             </div>
             <div class="footer-section">
@@ -50,14 +70,14 @@
             <div class="footer-section">
                 <h3>Redes Sociais</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Girassol Floricultura. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Girassol GS. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -88,6 +108,7 @@
                 Object.entries(productsByCategory).forEach(([category, products]) => {
                     const carouselSection = document.createElement('section');
                     carouselSection.className = 'carousel-section';
+                    carouselSection.id = `category-${category}`;
                     
                     const categoryTitle = document.createElement('h2');
                     categoryTitle.className = 'category-title';
@@ -116,6 +137,17 @@
                     carousel.appendChild(carouselContent);
                     carouselSection.appendChild(carousel);
                     container.appendChild(carouselSection);
+                });
+
+                // Adicionar eventos aos botões de categoria
+                document.querySelectorAll('.category-btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const category = button.getAttribute('data-category');
+                        const section = document.getElementById(`category-${category}`);
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
                 });
 
                 // Inicializar scroll horizontal para cada carrossel

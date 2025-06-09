@@ -51,6 +51,14 @@
   font-weight: bold;
   color: #4CAF50;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-price .button {
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .product-actions {
