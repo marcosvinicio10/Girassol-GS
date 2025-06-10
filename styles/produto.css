@@ -95,20 +95,25 @@
     color: #fff;
 }
 .produto-acoes .like-btn {
-    background: #fff;
-    color: var(--secondary-green);
-    border: 1.5px solid var(--secondary-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    width: 44px;
-    height: 44px;
-    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    color: #666;
+}
+.produto-acoes .like-btn i {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+.produto-acoes .like-btn:hover {
+    transform: scale(1.1);
 }
 .produto-acoes .like-btn.liked {
-    background: rgb(255, 0, 0);
-    color: #fff;
+    color: #ff4444;
+}
+.produto-acoes .like-btn.liked i {
+    animation: heartBeat 0.3s ease-in-out;
 }
 .produto-avaliacoes {
     margin-top: 1.5rem;
@@ -559,4 +564,16 @@
 }
 .carrinho-btn:hover {
     background: #1741a6;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
 } 

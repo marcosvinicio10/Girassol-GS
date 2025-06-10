@@ -62,7 +62,7 @@
     },
     {
       "id": 7,
-      "name": "Caixa coração Ferreiro Roche",
+      "name": "Caixa coração Ferreiro Rocher",
       "price": 80.00,
       "image": "assets/7.jpg",
       "category": "caixas",
@@ -72,7 +72,7 @@
     },
     {
       "id": 8,
-      "name": "Caixa e balão + Ferreiro Roche",
+      "name": "Caixa e balão + Ferreiro Rocher",
       "price": 55.00,
       "image": "assets/8.jpg",
       "category": "caixas",
@@ -125,7 +125,7 @@
       "name": "Tulipa Brilhante",
       "price": 50.00,
       "image": "assets/13.jpg",
-      "category": "buques",
+      "category": "unidades",
       "brand": "Girassol",
       "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
       "productionTime": "2 horas e 15 minutos"
@@ -162,7 +162,7 @@
     },
     {
       "id": 17,
-      "name": "Caixa Girassol + Ferreiro Roche",
+      "name": "Caixa Girassol + Ferreiro Rocher",
       "price": 80.00,
       "image": "assets/17.jpg",
       "category": "caixas",
@@ -172,7 +172,7 @@
     },
     {
       "id": 18,
-      "name": "Buquê Coração + Ferreiro Roche",
+      "name": "Buquê Coração + Ferreiro Rocher",
       "price": 130.00,
       "image": "assets/18.jpg",
       "category": "buques",
@@ -192,7 +192,7 @@
     },
     {
       "id": 20,
-      "name": "Buquê Ferreiro Roche",
+      "name": "Buquê Ferreiro Rocher",
       "price": 150.00,
       "image": "assets/20.jpg",
       "category": "buques",
@@ -212,7 +212,7 @@
     },
     {
       "id": 22,
-      "name": "Buquê com 5 Ferreiros Roche",
+      "name": "Buquê com 5 Ferreiros Rocher",
       "price": 55.00,
       "image": "assets/22.jpg",
       "category": "buques",
@@ -302,8 +302,8 @@
     },
     {
       "id": 31,
-      "name": "Buquê de Orquídeas",
-      "price": 199.90,
+      "name": "Buquê Divertidamente",
+      "price": 120.00,
       "image": "assets/31.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -312,8 +312,8 @@
     },
     {
       "id": 32,
-      "name": "Buquê Divertidamente",
-      "price": 120.00,
+      "name": "Dupla Love",
+      "price": 150.00,
       "image": "assets/32.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -322,8 +322,8 @@
     },
     {
       "id": 33,
-      "name": "Dupla Love",
-      "price": 150.00,
+      "name": "Buquê Rosas Origame",
+      "price": 55.00,
       "image": "assets/33.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -332,8 +332,8 @@
     },
     {
       "id": 34,
-      "name": "Buquê Rosas Origame",
-      "price": 55.00,
+      "name": "Rosas Mais Ferreiro Rocher",
+      "price": 80.00,
       "image": "assets/34.jpg",
       "category": "buques",
       "brand": "Girassol",

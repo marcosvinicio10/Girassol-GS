@@ -1,125 +1,76 @@
-class CarrinhoManager {
-    constructor() {
-        this.carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        this.carrinhoItems = document.querySelector('.carrinho-items');
-        this.carrinhoVazio = document.querySelector('.carrinho-vazio');
-        this.subtotalElement = document.getElementById('subtotal');
-        this.freteElement = document.getElementById('frete');
-        this.totalElement = document.getElementById('total');
-        
-        this.init();
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const carrinhoItems = document.querySelector('.carrinho-items');
+    const carrinhoVazio = document.querySelector('.carrinho-vazio');
+    const carrinhoGrid = document.querySelector('.carrinho-grid');
 
-    init() {
-        this.renderizarCarrinho();
-        this.atualizarResumo();
-        this.setupEventListeners();
-    }
-
-    setupEventListeners() {
-        document.querySelector('.finalizar-compra-btn').addEventListener('click', () => {
-            if (this.carrinho.length > 0) {
-                alert('Compra finalizada com sucesso!');
-                this.limparCarrinho();
-            }
-        });
-    }
-
-    renderizarCarrinho() {
-        if (this.carrinho.length === 0) {
-            this.carrinhoItems.style.display = 'none';
-            this.carrinhoVazio.style.display = 'block';
+    function atualizarCarrinho() {
+        if (carrinho.length === 0) {
+            carrinhoGrid.style.display = 'none';
+            carrinhoVazio.style.display = 'block';
             return;
         }
 
-        this.carrinhoItems.style.display = 'block';
-        this.carrinhoVazio.style.display = 'none';
-        this.carrinhoItems.innerHTML = '';
+        carrinhoGrid.style.display = 'grid';
+        carrinhoVazio.style.display = 'none';
 
-        this.carrinho.forEach((item, index) => {
-            const itemElement = document.createElement('div');
-            itemElement.className = 'carrinho-item';
-            itemElement.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
+        carrinhoItems.innerHTML = carrinho.map(item => `
+            <div class="carrinho-item" data-id="${item.id}">
+                <img src="${item.image.replace('assets/', '../../assets/')}" alt="${item.name}" class="item-imagem">
                 <div class="item-info">
-                    <h3>${item.name}</h3>
-                    <span class="preco">R$ ${item.price.toFixed(2)}</span>
+                    <span class="item-nome">${item.name}</span>
+                    <span class="item-preco">R$ ${item.price.toFixed(2)}</span>
                     <div class="item-quantidade">
-                        <button class="quantidade-btn" data-action="decrease" data-index="${index}">-</button>
+                        <button class="quantidade-btn" onclick="alterarQuantidade(${item.id}, -1)">-</button>
                         <span class="quantidade-valor">${item.quantidade}</span>
-                        <button class="quantidade-btn" data-action="increase" data-index="${index}">+</button>
+                        <button class="quantidade-btn" onclick="alterarQuantidade(${item.id}, 1)">+</button>
                     </div>
                 </div>
-                <button class="remover-item" data-index="${index}">
+                <button class="item-remover" onclick="removerItem(${item.id})">
                     <i class="fas fa-trash"></i>
                 </button>
-            `;
+            </div>
+        `).join('');
 
-            this.carrinhoItems.appendChild(itemElement);
-        });
-
-        // Adicionar event listeners para os botões
-        this.carrinhoItems.querySelectorAll('.quantidade-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const action = e.target.dataset.action;
-                const index = parseInt(e.target.dataset.index);
-                this.atualizarQuantidade(index, action);
-            });
-        });
-
-        this.carrinhoItems.querySelectorAll('.remover-item').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const index = parseInt(e.target.closest('.remover-item').dataset.index);
-                this.removerItem(index);
-            });
-        });
+        atualizarResumo();
     }
 
-    atualizarQuantidade(index, action) {
-        if (action === 'increase') {
-            this.carrinho[index].quantidade++;
-        } else if (action === 'decrease' && this.carrinho[index].quantidade > 1) {
-            this.carrinho[index].quantidade--;
+    function atualizarResumo() {
+        const subtotal = carrinho.reduce((total, item) => total + (item.price * item.quantidade), 0);
+        const total = subtotal;
+
+        document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2)}`;
+        document.getElementById('total').textContent = `R$ ${total.toFixed(2)}`;
+    }
+
+    window.alterarQuantidade = (id, delta) => {
+        const item = carrinho.find(item => item.id === id);
+        if (item) {
+            item.quantidade = Math.max(1, item.quantidade + delta);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+            window.dispatchEvent(new Event('carrinhoAtualizado'));
         }
+    };
 
-        this.salvarCarrinho();
-        this.renderizarCarrinho();
-        this.atualizarResumo();
-    }
+    window.removerItem = (id) => {
+        const index = carrinho.findIndex(item => item.id === id);
+        if (index !== -1) {
+            carrinho.splice(index, 1);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+            window.dispatchEvent(new Event('carrinhoAtualizado'));
+        }
+    };
 
-    removerItem(index) {
-        this.carrinho.splice(index, 1);
-        this.salvarCarrinho();
-        this.renderizarCarrinho();
-        this.atualizarResumo();
-    }
+    document.querySelector('.finalizar-pedido-btn').addEventListener('click', () => {
+        if (carrinho.length > 0) {
+            alert('Pedido finalizado com sucesso!');
+            localStorage.removeItem('carrinho');
+            atualizarCarrinho();
+            window.dispatchEvent(new Event('carrinhoAtualizado'));
+        }
+    });
 
-    atualizarResumo() {
-        const subtotal = this.carrinho.reduce((total, item) => {
-            return total + (item.price * item.quantidade);
-        }, 0);
-
-        const frete = subtotal > 0 ? 15 : 0;
-        const total = subtotal + frete;
-
-        this.subtotalElement.textContent = `R$ ${subtotal.toFixed(2)}`;
-        this.freteElement.textContent = `R$ ${frete.toFixed(2)}`;
-        this.totalElement.textContent = `R$ ${total.toFixed(2)}`;
-    }
-
-    salvarCarrinho() {
-        localStorage.setItem('carrinho', JSON.stringify(this.carrinho));
-    }
-
-    limparCarrinho() {
-        this.carrinho = [];
-        this.salvarCarrinho();
-        this.renderizarCarrinho();
-        this.atualizarResumo();
-    }
-}
-
-// Inicializar o gerenciador do carrinho quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', () => {
-    new CarrinhoManager();
+    atualizarCarrinho();
 }); 

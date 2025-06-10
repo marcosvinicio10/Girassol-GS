@@ -1,32 +1,57 @@
+// Função para atualizar o contador do carrinho
+function atualizarContadorCarrinho() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const totalItems = carrinho.reduce((total, item) => total + item.quantidade, 0);
+    
+    // Atualizar contador no header-placeholder
+    const cartCountPlaceholder = document.querySelector('#header-placeholder .cart-count');
+    if (cartCountPlaceholder) {
+        cartCountPlaceholder.textContent = totalItems;
+    }
+}
+
 // Insere o cabeçalho com efeito vidro em todas as páginas
 const headerHTML = `
- <header class="header">
-                <div class="header-content">
-                    <div class="logo">
-                        <h1>Girassol</h1>
-                    </div>
-                    <nav class="nav-menu">
-                        <ul>
-                            <li><a href="/index.html"><i class="fas fa-home nav-icon"></i><span class="nav-text">Início</span></a></li>
-                            <li><a href="/index.html#produtos"><i class="fas fa-shopping-bag nav-icon"></i><span class="nav-text">Produtos</span></a></li>
-                            <li><a href="/index.html#contato"><i class="fas fa-envelope nav-icon"></i><span class="nav-text">Contato</span></a></li>
-                            <li>
-                                <div class="cart-icon" id="cartIcon">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="cart-count">0</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Girassol</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/index.html"><i class="fas fa-home nav-icon"></i><span class="nav-text">Início</span></a></li>
+                    <li><a href="/index.html#produtos"><i class="fas fa-shopping-bag nav-icon"></i><span class="nav-text">Produtos</span></a></li>
+                    <li><a href="/index.html#footer"><i class="fas fa-envelope nav-icon"></i><span class="nav-text">Contato</span></a></li>
+                    <li>
+                        <a href="/src/pages/carrinho.html" class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 `;
 
 document.addEventListener('DOMContentLoaded', function() {
     const headerDiv = document.getElementById('header-placeholder');
     if (headerDiv) {
         headerDiv.innerHTML = headerHTML;
+        atualizarContadorCarrinho();
     }
+});
+
+// Atualizar contador quando o carrinho mudar
+window.addEventListener('storage', (e) => {
+    if (e.key === 'carrinho') {
+        atualizarContadorCarrinho();
+    }
+});
+
+// Atualizar contador quando o carrinho for modificado na mesma janela
+window.addEventListener('carrinhoAtualizado', () => {
+    atualizarContadorCarrinho();
 });
 
 class Header extends HTMLElement {
@@ -51,7 +76,7 @@ class Header extends HTMLElement {
                         <ul>
                             <li><a href="/index.html"><i class="fas fa-home nav-icon"></i><span class="nav-text">Início</span></a></li>
                             <li><a href="/index.html#produtos"><i class="fas fa-shopping-bag nav-icon"></i><span class="nav-text">Produtos</span></a></li>
-                            <li><a href="/index.html#contato"><i class="fas fa-envelope nav-icon"></i><span class="nav-text">Contato</span></a></li>
+                            <li><a href="/index.html#footer"><i class="fas fa-envelope nav-icon"></i><span class="nav-text">Contato</span></a></li>
                             <li>
                                 <a href="/src/pages/carrinho.html" class="cart-icon" id="cartIcon">
                                     <i class="fas fa-shopping-cart"></i>
@@ -75,6 +100,11 @@ class Header extends HTMLElement {
 
         // Atualizar contador quando a página carregar
         document.addEventListener('DOMContentLoaded', () => {
+            this.atualizarContadorCarrinho();
+        });
+
+        // Atualizar contador quando o carrinho for modificado na mesma janela
+        window.addEventListener('carrinhoAtualizado', () => {
             this.atualizarContadorCarrinho();
         });
     }

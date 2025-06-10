@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Produto | Girassol Floricultura</title>
+        <title>Produto | Girassol | Produto </title>
         <link rel="stylesheet" href="../../styles/index.css">
         <link rel="stylesheet" href="../../styles/produto.css">
         <link rel="stylesheet" href="../../styles/header.css">
@@ -47,6 +47,55 @@
             </div>
         </div>
     </main>
+    <style>
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transform: translateX(150%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification i {
+            font-size: 1rem;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(150%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(150%);
+            }
+        }
+    </style>
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Produto adicionado!</span>
+    </div>
     <script src="../../src/components/header.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -66,6 +115,51 @@
                 // Atualizar galeria
                 const galeria = document.querySelector('.produto-galeria');
                 galeria.innerHTML = `<img src="${imagePath}" alt="Foto 1" class="selected" onclick="trocarFoto(this)">`;
+
+                // Adicionar evento ao botão de adicionar ao carrinho
+                document.querySelector('.carrinho-btn').addEventListener('click', () => {
+                    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+                    const itemExistente = carrinho.find(item => item.id === selectedProduct.id);
+
+                    if (itemExistente) {
+                        itemExistente.quantidade += 1;
+                    } else {
+                        carrinho.push({
+                            ...selectedProduct,
+                            quantidade: 1
+                        });
+                    }
+
+                    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                    // Disparar evento para atualizar o contador
+                    window.dispatchEvent(new Event('carrinhoAtualizado'));
+                    
+                    // Mostrar notificação
+                    const notification = document.getElementById('notification');
+                    notification.classList.add('show');
+                    
+                    // Remover notificação após 3 segundos
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 3000);
+                });
+
+                // Adicionar evento ao botão de curtir
+                const likeBtn = document.getElementById('likeBtn');
+                if (likeBtn) {
+                    likeBtn.addEventListener('click', () => {
+                        const icon = likeBtn.querySelector('i');
+                        if (icon.classList.contains('fa-regular')) {
+                            icon.classList.remove('fa-regular');
+                            icon.classList.add('fa-solid');
+                            likeBtn.classList.add('liked');
+                        } else {
+                            icon.classList.remove('fa-solid');
+                            icon.classList.add('fa-regular');
+                            likeBtn.classList.remove('liked');
+                        }
+                    });
+                }
             }
         });
 
