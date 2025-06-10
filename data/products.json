@@ -7,8 +7,8 @@
       "image": "assets/1.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Um lindo buquê de rosas vermelhas frescas, perfeito para presentear quem você ama. As rosas são cuidadosamente selecionadas e arranjadas para criar um visual impactante e romântico.",
-      "productionTime": "2 horas"
+      "description": "Uma explosão de cores e alegria em um único buquê. Perfeito para quem busca um presente único e cheio de personalidade.",
+      "productionTime": "5 dias"
     },
     {
       "id": 2,
@@ -17,8 +17,8 @@
       "image": "assets/2.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Arranjo vibrante com girassóis frescos, trazendo alegria e energia para qualquer ambiente. Os girassóis são combinados com folhagens verdes para criar um contraste natural e harmonioso.",
-      "productionTime": "1 hora e 30 minutos"
+      "description": "Elegância e sofisticação em um buquê que brilha como uma pérola. Ideal para ocasiões especiais e momentos inesquecíveis.",
+      "productionTime": "5 dias"
     },
     {
       "id": 3,
@@ -27,8 +27,8 @@
       "image": "assets/3.jpg",
       "category": "unidades",
       "brand": "Girassol",
-      "description": "Elegante orquídea Phalaenopsis em vaso decorativo. Esta espécie é conhecida por sua beleza e durabilidade, florescendo por vários meses e trazendo sofisticação ao ambiente.",
-      "productionTime": "1 hora"
+      "description": "Um girassol único que traz alegria e energia para qualquer ambiente. Perfeito para decorar mesas de escritório ou dar um toque de cor e vida à sua decoração.",
+      "productionTime": "5 dias"
     },
     {
       "id": 4,
@@ -37,8 +37,8 @@
       "image": "assets/4.jpg",
       "category": "unidades",
       "brand": "Girassol",
-      "description": "Encantadora cesta com uma variedade de flores do campo, criando um visual rústico e acolhedor. Inclui flores sazonais e folhagens naturais, perfeita para decorar ou presentear.",
-      "productionTime": "2 horas e 30 minutos"
+      "description": "Uma tulipa única que traz elegância e charme para qualquer ambiente. Ideal para decorar mesas de escritório ou dar um toque especial à decoração.",
+      "productionTime": "5 dias"
     },
     {
       "id": 5,
@@ -47,8 +47,8 @@
       "image": "assets/5.jpg",
       "category": "unidades",
       "brand": "Girassol",
-      "description": "Conjunto de suculentas em vaso decorativo. Plantas fáceis de cuidar e que trazem um toque de natureza para qualquer espaço. Ideal para quem busca praticidade sem abrir mão da beleza.",
-      "productionTime": "45 minutos"
+      "description": "Uma rosa solitária que fala por si. Perfeita para quem busca um presente simples, mas cheio de significado.",
+      "productionTime": "5 dias"
     },
     {
       "id": 6,
@@ -57,8 +57,8 @@
       "image": "assets/6.jpg",
       "category": "unidades",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma pérola única que brilha com sua própria luz. Ideal para decorar ambientes ou compor arranjos personalizados.",
+      "productionTime": "5 dias"
     },
     {
       "id": 7,
@@ -67,8 +67,8 @@
       "image": "assets/7.jpg",
       "category": "caixas",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma caixa em formato de coração recheada com os deliciosos chocolates Ferreiro Rocher. O presente perfeito para demonstrar seu amor.",
+      "productionTime": "5 dias"
     },
     {
       "id": 8,
@@ -77,8 +77,8 @@
       "image": "assets/8.jpg",
       "category": "caixas",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma combinação encantadora de chocolates e balão. Ideal para celebrar aniversários e datas especiais com um toque de doçura.",
+      "productionTime": "5 dias"
     },
     {
       "id": 9,
@@ -87,8 +87,8 @@
       "image": "assets/9.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que brilha com a elegância das pérolas. Perfeito para quem busca um presente sofisticado e único.",
+      "productionTime": "5 dias"
     },
     {
       "id": 10,
@@ -97,8 +97,8 @@
       "image": "assets/10.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê compacto e encantador, ideal para presentear em qualquer ocasião. Pequeno em tamanho, mas grande em significado.",
+      "productionTime": "5 dias"
     },
     {
       "id": 11,
@@ -107,8 +107,8 @@
       "image": "assets/11.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que carrega toda a magia e romance de um casamento. Perfeito para celebrar o amor e a união.",
+      "productionTime": "5 dias"
     },
     {
       "id": 12,
@@ -117,8 +117,8 @@
       "image": "assets/12.jpg",
       "category": "caixas",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma caixa especial com chocolates e um recado personalizado. Ideal para expressar seus sentimentos de forma doce e carinhosa.",
+      "productionTime": "5 dias"
     },
     {
       "id": 13,
@@ -127,8 +127,8 @@
       "image": "assets/13.jpg",
       "category": "unidades",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma tulipa que brilha com sua própria luz. Perfeita para decorar ambientes ou compor arranjos especiais.",
+      "productionTime": "5 dias"
     },
     {
       "id": 14,
@@ -137,8 +137,8 @@
       "image": "assets/14.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que combina a delicadeza das flores com o brilho do ouro branco. Ideal para ocasiões especiais e momentos inesquecíveis.",
+      "productionTime": "5 dias"
     },
     {
       "id": 15,
@@ -147,8 +147,8 @@
       "image": "assets/15.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que une diferentes tons de cetim em uma composição única. Perfeito para quem busca um presente sofisticado e elegante.",
+      "productionTime": "5 dias"
     },
     {
       "id": 16,
@@ -157,8 +157,8 @@
       "image": "assets/16.jpg",
       "category": "caixas",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma caixa elegante em ouro branco recheada com deliciosos bombons. Ideal para presentear em ocasiões especiais.",
+      "productionTime": "5 dias"
     },
     {
       "id": 17,
@@ -167,8 +167,8 @@
       "image": "assets/17.jpg",
       "category": "caixas",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma caixa decorada com girassóis e recheada com chocolates Ferreiro Rocher. Perfeita para trazer alegria e doçura a qualquer momento.",
+      "productionTime": "5 dias"
     },
     {
       "id": 18,
@@ -177,8 +177,8 @@
       "image": "assets/18.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê em formato de coração que combina flores e chocolates. Ideal para demonstrar seu amor de forma especial.",
+      "productionTime": "5 dias"
     },
     {
       "id": 19,
@@ -187,8 +187,8 @@
       "image": "assets/19.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que fala a linguagem do coração. Perfeito para expressar seus sentimentos mais profundos.",
+      "productionTime": "5 dias"
     },
     {
       "id": 20,
@@ -197,8 +197,8 @@
       "image": "assets/20.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que une a beleza das flores com a doçura dos chocolates Ferreiro Rocher. Ideal para ocasiões especiais.",
+      "productionTime": "5 dias"
     },
     {
       "id": 21,
@@ -207,8 +207,8 @@
       "image": "assets/21.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê inspirado no mundo encantado das princesas. Perfeito para quem acredita em contos de fadas.",
+      "productionTime": "5 dias"
     },
     {
       "id": 22,
@@ -217,8 +217,8 @@
       "image": "assets/22.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que combina flores com cinco deliciosos chocolates Ferreiro Rocher. Ideal para presentear em qualquer ocasião.",
+      "productionTime": "5 dias"
     },
     {
       "id": 23,
@@ -227,8 +227,8 @@
       "image": "assets/23.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que une a elegância das rosas com a alegria dos girassóis. Perfeito para celebrar momentos especiais.",
+      "productionTime": "5 dias"
     },
     {
       "id": 24,
@@ -237,18 +237,18 @@
       "image": "assets/24.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que traz toda a energia e alegria dos girassóis. Ideal para iluminar o dia de alguém especial.",
+      "productionTime": "5 dias"
     },
     {
       "id": 25,
       "name": "Borboleta com Led ",
       "price": 55.00,
       "image": "assets/25.jpg",
-      "category": "buques",
+      "category": "unidades",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Uma borboleta iluminada que traz magia e encanto para qualquer ambiente. Perfeita para decorar e criar um clima especial.",
+      "productionTime": "5 dias"
     },
     {
       "id": 26,
@@ -257,8 +257,8 @@
       "image": "assets/26.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê inspirado nas obras de Van Gogh, trazendo cores vibrantes e arte para sua decoração.",
+      "productionTime": "5 dias"
     },
     {
       "id": 27,
@@ -267,8 +267,8 @@
       "image": "assets/27.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que brilha com o glamour do cetim e glitter. Ideal para ocasiões especiais e momentos de celebração.",
+      "productionTime": "5 dias"
     },
     {
       "id": 28,
@@ -277,8 +277,8 @@
       "image": "assets/28.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê delicado de margaridas que traz simplicidade e charme. Perfeito para decorar ambientes descontraídos.",
+      "productionTime": "5 dias"
     },
     {
       "id": 29,
@@ -287,8 +287,8 @@
       "image": "assets/29.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que une a arte de Van Gogh com a delicadeza das borboletas. Ideal para quem aprecia arte e beleza.",
+      "productionTime": "5 dias"
     },
     {
       "id": 30,
@@ -297,8 +297,8 @@
       "image": "assets/30.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que combina a alegria dos girassóis com a doçura dos bombons. Perfeito para presentear em qualquer ocasião.",
+      "productionTime": "5 dias"
     },
     {
       "id": 31,
@@ -307,8 +307,8 @@
       "image": "assets/31.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê inspirado no filme Divertidamente, trazendo cores e alegria para celebrar as emoções.",
+      "productionTime": "5 dias"
     },
     {
       "id": 32,
@@ -317,8 +317,8 @@
       "image": "assets/32.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê duplo que celebra o amor em dobro. Ideal para casais e momentos românticos especiais.",
+      "productionTime": "5 dias"
     },
     {
       "id": 33,
@@ -327,8 +327,8 @@
       "image": "assets/33.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê de rosas em origami, unindo arte e delicadeza. Perfeito para quem aprecia trabalhos manuais e criatividade.",
+      "productionTime": "5 dias"
     },
     {
       "id": 34,
@@ -337,10 +337,8 @@
       "image": "assets/34.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Sofisticado buquê de orquídeas, perfeito para ocasiões especiais. As orquídeas são arranjadas com folhagens elegantes, criando uma composição única e duradoura.",
-      "productionTime": "2 horas e 15 minutos"
+      "description": "Um buquê que une a elegância das rosas com a doçura dos chocolates Ferreiro Rocher. Ideal para ocasiões especiais.",
+      "productionTime": "5 dias"
     }
-
-
   ]
 } 
