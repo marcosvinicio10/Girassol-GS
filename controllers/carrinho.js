@@ -1,3 +1,5 @@
+import { gerarLinkWhatsApp } from './whatsapp.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Carregado');
     
@@ -99,10 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('total').textContent = `R$ ${total.toFixed(2)}`;
     }
 
-    document.querySelector('.finalizar-pedido-btn').addEventListener('click', () => {
+    document.querySelector('.finalizar-pedido-btn').addEventListener('click', (e) => {
         if (carrinho.length > 0) {
-            if (confirm('Deseja finalizar o pedido?')) {
-                alert('Pedido finalizado com sucesso!');
+            e.preventDefault(); // Previne o comportamento padrão do link
+            const link = gerarLinkWhatsApp();
+            if (link) {
+                window.open(link, '_blank');
+                // Limpa o carrinho após abrir o WhatsApp
                 carrinho = [];
                 localStorage.removeItem('carrinho');
                 atualizarCarrinho();
