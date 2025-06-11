@@ -1,0 +1,36 @@
+.footer-credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.footer-credits img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.footer-credits img:hover {
+    transform: scale(1.1);
+}
+
+.footer-credits p {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-credits .made-by {
+    color: #fff;
+    font-size: 0.9rem;
+    opacity: 0.8;
+} 
