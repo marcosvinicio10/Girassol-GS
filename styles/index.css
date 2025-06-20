@@ -88,7 +88,7 @@ body {
 .girassol-right {
     right: -5%;
     transform: scaleX(-1);
-    animation: float 3s ease-in-out infinite reverse;
+    animation: floatRight 3s ease-in-out infinite reverse;
 }
 
 /* Products Section */
@@ -723,7 +723,16 @@ body {
 }
 
 .girassol-right {
-    animation: float 3s ease-in-out infinite reverse;
+    animation: floatRight 3s ease-in-out infinite reverse;
+}
+
+@keyframes floatRight {
+    0%, 100% { 
+        transform: translateY(0px) scaleX(-1); 
+    }
+    50% { 
+        transform: translateY(-10px) scaleX(-1); 
+    }
 }
 
 .cta-button {
