@@ -43,7 +43,12 @@ class ProductCard extends HTMLElement {
         };
 
         localStorage.setItem('selectedProduct', JSON.stringify(product));
-        window.location.href = 'src/pages/produto.html';
+        
+        // Detectar se está na página de produto para ajustar o caminho
+        const isProductPage = window.location.pathname.includes('produto.html');
+        const productPagePath = isProductPage ? 'produto.html' : 'src/pages/produto.html';
+        
+        window.location.href = productPagePath;
     }
 
     render() {
@@ -54,9 +59,13 @@ class ProductCard extends HTMLElement {
         const description = this.getAttribute('description');
         const id = this.getAttribute('id');
 
+        // Detectar se está na página de produto para ajustar o caminho do CSS
+        const isProductPage = window.location.pathname.includes('produto.html');
+        const cssPath = isProductPage ? '../../styles/product-card.css' : '/styles/product-card.css';
+
         this.shadowRoot.innerHTML = `
             <style>
-                @import url('/styles/product-card.css');
+                @import url('${cssPath}');
             </style>
 
             <div class="product-card">
