@@ -1,274 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html class="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Girassol GS — flores artesanais, buquês e entregas no Rio de Janeiro. Catálogo online com atendimento por WhatsApp."
+    />
     <title>Girassol GS</title>
-    <link rel="icon" type="image/jpg" href="assets/favicon.jpg">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NREDJEQXQ7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/header-component.css" />
+  </head>
+  <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+    <header-component active="home"></header-component>
 
-  gtag('config', 'G-NREDJEQXQ7');
-</script>
-</head>
-<body>
-    <div class="top-decoration">
-        <img src="assets/mato.png" alt="Decoração de mato" class="mato-decoration">
-    </div>
-    <div id="header-placeholder"></div>
+    <main class="flex-1">
+      <section class="relative min-h-[min(100vh,760px)] flex items-center overflow-hidden bg-background">
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Campo de girassóis ao entardecer"
+            class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Vsa1CFu1eUPAsdFKt3FZN2U-EPKJ8Q8EUOZnYrs8WbOz73S7XrrYqfiwhrPMsDVncANtnuIxPWfYnRBMmVgUds19h5ogsnD8MP-PolQE3DJ8RjOgM9_6GLhARXJDHFbG2TlgQaAzBfJYQT67rDGcOg2HCHzxD5eh8-m5AIIxWV3CjyreORJcXSwqW6xtzD4CXMxh5aG4MnfBleE0jRMVfeOD9U4BDlpa3HylypWWApTNpZBznb_Qlju4I_vT8gp09C6Gs4mrDAHF"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+          <div class="absolute inset-0 hero-gradient" aria-hidden="true"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+          <div class="max-w-2xl" data-animate="fade-up">
+            <p class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-3">Rio de Janeiro, RJ</p>
+            <h1 class="font-display-lg text-display-lg md:text-[3rem] text-secondary mb-6">
+              Flores que transformam momentos em memórias
+            </h1>
+            <p class="font-body-lg text-body-lg text-secondary/90 mb-10 max-w-lg">
+              Arranjos feitos à mão, logística cuidadosa e atendimento direto no WhatsApp.
+            </p>
+            <div class="flex flex-wrap gap-4" data-animate="fade-up" data-animate-delay="2">
+              <a
+                class="inline-flex items-center px-10 py-4 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full artisanal-shadow hover:brightness-95 transition-all active:scale-95"
+                href="#catalog"
+              >
+                Ver catálogo
+              </a>
+              <a
+                class="inline-flex items-center px-8 py-4 border border-primary/40 bg-surface-container-lowest/90 text-on-background font-label-md text-label-md rounded-full hover:bg-surface-bright transition-all shadow-sm"
+                href="https://wa.me/5521964916258?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <main>
-        <section id="home" class="hero">
-            <img src="assets/girassol.png" alt="Girassol" class="girassol-left" data-aos="fade-right" data-aos-delay="200" />
-            <img src="assets/girassol.png" alt="Girassol" class="girassol-right" data-aos="fade-left" data-aos-delay="200" />
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="400">
-                <h2 data-aos="fade-up" data-aos-delay="600">Bem-vindo à Girassol</h2>
-                <p data-aos="fade-up" data-aos-delay="800">Flores que transformam momentos em memórias</p>
-                <a href="#produtos" class="cta-button" data-aos="fade-up" data-aos-delay="1000">Ver Produtos</a>
+      <section class="py-16 bg-background" id="catalog" aria-labelledby="catalog-title">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-animate="fade-up">
+            <div>
+              <span class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2 block">Nossas coleções</span>
+              <h2 id="catalog-title" class="font-headline-lg text-headline-lg text-secondary">Catálogo Girassol</h2>
+              <p class="font-body-md text-body-md text-secondary/90 mt-2 max-w-xl">
+                Buquês, caixas e unidades — filtre por tipo e abra a página do produto para tamanhos, fotos e carrinho.
+              </p>
             </div>
-        </section>
+            <div class="flex flex-wrap gap-3" id="catalog-filters" role="toolbar" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todos" class="px-6 py-2 rounded-full border border-primary bg-primary-container text-on-primary-container font-label-md text-label-md transition-all" aria-pressed="true">
+                Todos
+              </button>
+              <button type="button" data-filter="buques" class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all" aria-pressed="false">
+                Buquês
+              </button>
+              <button type="button" data-filter="caixas" class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all" aria-pressed="false">
+                Caixas
+              </button>
+              <button type="button" data-filter="unidades" class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all" aria-pressed="false">
+                Unidades
+              </button>
+            </div>
+          </div>
+          <div id="catalog-grid" class="catalog-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-gutter" aria-label="Lista de produtos"></div>
+        </div>
+      </section>
 
-        <section id="produtos" class="products">
-            <h2 data-aos="fade-up">Nosso Catálogo</h2>
-            <div class="category-buttons" data-aos="fade-up" data-aos-delay="200">
-                <div class="category-item" data-aos="zoom-in" data-aos-delay="300">
-                    <button class="category-btn" data-category="buques">
-                        <img src="assets/buguersBotao.png" alt="Buquês">
-                    </button>
-                    <span class="category-name">Buquês</span>
-                </div>
-                <div class="category-item" data-aos="zoom-in" data-aos-delay="400">
-                    <button class="category-btn" data-category="caixas">
-                        <img src="assets/bombomBotao.png" alt="Caixas">
-                    </button>
-                    <span class="category-name">Caixas</span>
-                </div>
-                <div class="category-item" data-aos="zoom-in" data-aos-delay="500">
-                    <button class="category-btn" data-category="unidades">
-                        <img src="assets/unidadeBotao.png" alt="Unidades">
-                    </button>
-                    <span class="category-name">Unidades</span>
-                </div>
+      <section class="py-20 bg-surface-container-low border-t border-outline-variant/30" id="contato">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+          <div class="max-w-xl mx-auto" data-animate="fade-up">
+            <span class="material-symbols-outlined text-primary text-[48px] mb-4 block" aria-hidden="true">local_florist</span>
+            <h2 class="font-display-lg text-display-lg text-on-surface mb-4">Peça algo especial</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+              Arranjo sob medida, entrega combinada ou dúvidas sobre disponibilidade —  respondemos rápido no WhatsApp.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full artisanal-shadow transition-all active:scale-95"
+                href="https://wa.me/5521964916258"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="material-symbols-outlined">call</span>
+                (21) 96491-6258
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-outline text-on-surface font-label-md text-label-md rounded-full hover:bg-surface-container transition-all active:scale-95"
+                href="#catalog"
+              >
+                Ver catálogo
+              </a>
             </div>
-            <div id="carousels-container">
-                <!-- Os carrosséis serão inseridos aqui via JavaScript -->
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <div class="cards-container">
-        <div class="e-card playing" data-aos="fade-up" data-aos-delay="200">
-            <div class="image"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="infotop">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
-                    <path fill="currentColor" d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
-                </svg>
-                <br>      
-                Escolha
-                <br>
-                <div class="name">Faça a escolha do seu produto ou presente</div>
-            </div>
+    <footer class="bg-surface-container border-t border-outline-variant/50 mt-auto" data-animate="fade">
+      <div class="flex flex-col md:flex-row justify-between items-start w-full py-12 px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+        <div class="flex flex-col gap-4 max-w-xs">
+          <div class="font-headline-md text-headline-md text-secondary">Girassol GS</div>
+          <p class="font-body-md text-body-md text-on-surface-variant opacity-90">
+            © 2026 Girassol GS. Flores que transformam momentos em memórias.
+          </p>
         </div>
-
-        <div class="e-card playing" data-aos="fade-up" data-aos-delay="400">
-            <div class="image"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="infotop">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
-                    <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-                </svg>
-                <br>      
-                Pedido
-                <br>
-                <div class="name">Realize seu pedido pelo Whatssap</div>
-            </div>
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+          <div class="flex flex-col gap-4">
+            <span class="font-label-md text-label-md text-secondary font-bold">Atendimento</span>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/5521964916258" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contato">Entregas e retirada</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <span class="font-label-md text-label-md text-secondary font-bold">Loja</span>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#catalog">Catálogo</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="pages/product.html?id=24">Destaque: Buquê Girassol</a>
+          </div>
         </div>
-
-        <div class="e-card playing" data-aos="fade-up" data-aos-delay="600">
-            <div class="image"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="infotop">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
-                    <path fill="currentColor" d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                </svg>
-                <br>      
-                Entrega
-                <br>
-                <div class="name">Defina uma data de entrega para o seu presente</div>
-            </div>
+      </div>
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-8 text-center md:text-left">
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start font-body-md text-body-md text-on-surface-variant">
+          <a class="hover:text-primary transition-colors" href="#" rel="noopener noreferrer">Instagram</a>
         </div>
-    </div>
-
-    <div id="footer-placeholder"></div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
-                <h3>Girassol GS</h3>
-                <p>Transformando momentos em memórias com as mais belas flores.</p>
-            </div>
-            <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
-                <h3 href="footer">Contato</h3>
-                <p><i class="fas fa-phone"></i> (21) 96491-6258</p>
-                <p><i class="fas fa-envelope"></i> contato@girassol.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Em breve</p>
-            </div>
-            <div class="footer-section" data-aos="fade-up" data-aos-delay="600">
-                <h3 id="footer">Redes Sociais</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/girassol.gs"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5521964916258"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom" data-aos="fade-up" data-aos-delay="800">
-            <p>&copy; 2025 Girassol GS. Todos os direitos reservados.</p>
-        </div>
-        <div class="footer-credits" data-aos="fade-up" data-aos-delay="1000">
-            <span class="made-by">Made by</span>
-            <a href="https://marcosvinicio.site" target="_blank">
-                <img src="assets/mv.png" alt="Marcos Vinicio">
-            </a>
-            <p>Marcos Vinicio | www.marcosvinicio.site</p>
-        </div>
+      </div>
     </footer>
 
-    <script src="controllers/products.js"></script>
-    <script src="controllers/cart.js"></script>
-    <script src="controllers/details.js"></script>
-    <script src="controllers/scroll.js"></script>
-    <script src="src/components/header.js"></script>
-    <script src="src/components/ProductCard.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        // Inicializar AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
-
-        // Carregar produtos do JSON
-        async function loadProducts() {
-            try {
-                const response = await fetch('data/products.json');
-                const data = await response.json();
-                const container = document.getElementById('carousels-container');
-                
-                // Agrupar produtos por categoria
-                const productsByCategory = {};
-                data.products.forEach(product => {
-                    if (!productsByCategory[product.category]) {
-                        productsByCategory[product.category] = [];
-                    }
-                    productsByCategory[product.category].push(product);
-                });
-
-                // Criar carrossel para cada categoria
-                Object.entries(productsByCategory).forEach(([category, products], index) => {
-                    const carouselSection = document.createElement('section');
-                    carouselSection.className = 'carousel-section';
-                    carouselSection.id = `category-${category}`;
-                    carouselSection.setAttribute('data-aos', 'fade-up');
-                    carouselSection.setAttribute('data-aos-delay', (200 + index * 100).toString());
-                    
-                    const categoryTitle = document.createElement('h2');
-                    categoryTitle.className = 'category-title';
-                    // Capitalizar primeira letra da categoria
-                    categoryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-                    carouselSection.appendChild(categoryTitle);
-
-                    const carousel = document.createElement('div');
-                    carousel.className = 'carousel';
-                    
-                    const carouselContent = document.createElement('div');
-                    carouselContent.className = 'carousel-content';
-                    
-                    products.forEach(product => {
-                        const card = document.createElement('product-card');
-                        card.setAttribute('id', product.id);
-                        card.setAttribute('name', product.name);
-                        card.setAttribute('price', product.price);
-                        card.setAttribute('image', product.image);
-                        card.setAttribute('brand', product.brand);
-                        card.setAttribute('description', product.description);
-                        card.setAttribute('production-time', product.productionTime);
-                        carouselContent.appendChild(card);
-                    });
-
-                    carousel.appendChild(carouselContent);
-                    carouselSection.appendChild(carousel);
-                    container.appendChild(carouselSection);
-                });
-
-                // Adicionar eventos aos botões de categoria
-                document.querySelectorAll('.category-btn').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const category = button.getAttribute('data-category');
-                        const section = document.getElementById(`category-${category}`);
-                        if (section) {
-                            section.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    });
-                });
-
-                // Inicializar scroll horizontal para cada carrossel
-                document.querySelectorAll('.carousel').forEach(carousel => {
-                    let isDown = false;
-                    let startX;
-                    let scrollLeft;
-
-                    carousel.addEventListener('mousedown', (e) => {
-                        isDown = true;
-                        carousel.classList.add('active');
-                        startX = e.pageX - carousel.offsetLeft;
-                        scrollLeft = carousel.scrollLeft;
-                    });
-
-                    carousel.addEventListener('mouseleave', () => {
-                        isDown = false;
-                        carousel.classList.remove('active');
-                    });
-
-                    carousel.addEventListener('mouseup', () => {
-                        isDown = false;
-                        carousel.classList.remove('active');
-                    });
-
-                    carousel.addEventListener('mousemove', (e) => {
-                        if (!isDown) return;
-                        e.preventDefault();
-                        const x = e.pageX - carousel.offsetLeft;
-                        const walk = (x - startX) * 2;
-                        carousel.scrollLeft = scrollLeft - walk;
-                    });
-                });
-
-            } catch (error) {
-                console.error('Erro ao carregar produtos:', error);
-            }
-        }
-
-        // Carregar produtos quando a página carregar
-        document.addEventListener('DOMContentLoaded', loadProducts);
-    </script>
-</body>
-</html> 
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/header-component.js"></script>
+    <script src="assets/js/catalog-data.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/home.js"></script>
+  </body>
+</html>

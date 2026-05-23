@@ -1,0 +1,255 @@
+/**
+ * Cabeçalho flutuante (efeito vidro) — Web Component <header-component>
+ * Paleta alinhada ao tema Girassol GS (dourado / verde oliva).
+ */
+
+:root {
+  --header-glass-bg: rgba(255, 249, 210, 0.52);
+  --header-glass-border: rgba(200, 150, 0, 0.45);
+  --header-glass-shadow: 0 10px 40px rgba(60, 45, 8, 0.14);
+  --header-accent: #4d3f00;
+  --header-accent-soft: rgba(77, 63, 0, 0.12);
+  --header-text: #1a1708;
+  --header-text-muted: #4a3f18;
+  --header-transition: 0.22s ease;
+}
+
+/* Espaço para o cabeçalho fixo */
+body:has(header-component) {
+  padding-top: clamp(5.25rem, 12vw, 6.75rem);
+}
+
+header-component {
+  display: block;
+}
+
+.header-glass-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.header-glass-outer > * {
+  pointer-events: auto;
+}
+
+.header-glass-shell {
+  width: min(92%, 1200px);
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  animation: header-slide-in 0.65s ease-out;
+}
+
+.header-glass {
+  background: var(--header-glass-bg);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1.5px solid var(--header-glass-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--header-glass-shadow);
+  transition: box-shadow var(--header-transition), border-color var(--header-transition);
+}
+
+.header-glass:hover {
+  box-shadow: 0 14px 44px rgba(60, 45, 8, 0.18);
+  border-color: rgba(180, 130, 0, 0.55);
+}
+
+.header-glass-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .header-glass-inner {
+    padding: 1rem 1.75rem;
+  }
+}
+
+.header-glass-logo {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  font-weight: 600;
+  color: var(--header-accent);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.header-glass-logo:hover {
+  opacity: 0.88;
+}
+
+.header-glass-nav {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .header-glass-nav {
+    display: flex;
+  }
+}
+
+.header-glass-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--header-text-muted);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--header-transition), background var(--header-transition);
+  position: relative;
+}
+
+.header-glass-nav a:hover {
+  color: var(--header-accent);
+  background: var(--header-accent-soft);
+}
+
+.header-glass-nav a.is-active {
+  color: var(--header-accent);
+  border-bottom: 2px solid var(--header-accent);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.header-glass-nav .nav-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.header-glass-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-glass-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 0.5rem;
+  color: var(--header-text-muted);
+  cursor: pointer;
+  transition: color var(--header-transition), background var(--header-transition), transform 0.15s ease;
+}
+
+.header-glass-icon-btn:hover {
+  color: var(--header-accent);
+  background: var(--header-accent-soft);
+}
+
+.header-glass-icon-btn:active {
+  transform: scale(0.96);
+}
+
+.header-glass-cart {
+  position: relative;
+}
+
+.header-glass-cart .cart-count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  color: #1a1708;
+  background: linear-gradient(135deg, #ffcc33, #e8a400);
+  border-radius: 9999px;
+  border: 2px solid var(--header-glass-bg);
+  box-shadow: 0 2px 8px rgba(60, 45, 8, 0.2);
+}
+
+/* Painel mobile (abaixo da barra) */
+.header-glass-mobile {
+  width: min(92%, 1200px);
+  margin-top: 0.35rem;
+}
+
+.header-glass-mobile .mobile-nav-panel {
+  background: rgba(255, 249, 220, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 168, 60, 0.5);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(60, 45, 8, 0.1);
+}
+
+.header-glass-mobile .mobile-nav-panel a {
+  display: block;
+  padding: 0.65rem 1rem;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--header-text);
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.header-glass-mobile .mobile-nav-panel a:hover {
+  background: var(--header-accent-soft);
+  color: var(--header-accent);
+}
+
+@media (max-width: 767px) {
+  .header-glass-nav .nav-text {
+    display: inline;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-glass-shell {
+    width: min(94%, 1200px);
+    margin-top: 0.65rem;
+  }
+
+  .header-glass-inner {
+    padding: 0.65rem 1rem;
+  }
+
+  .header-glass-nav .nav-text {
+    display: none;
+  }
+
+  .header-glass-nav .nav-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes header-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

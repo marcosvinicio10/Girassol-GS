@@ -1,18 +1,8 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Buquê Sortido",
-      "price": 65.00,
-      "image": "assets/1.jpg",
-      "category": "buques",
-      "brand": "Girassol",
-      "description": "Uma explosão de cores e alegria em um único buquê. Perfeito para quem busca um presente único e cheio de personalidade.",
-      "productionTime": "5 dias"
-    },
-    {
       "id": 2,
-      "name": "Buquê Pérola 1",
+      "name": "Buquê Dália",
       "price": 100.00,
       "image": "assets/2.jpg",
       "category": "buques",
@@ -21,69 +11,9 @@
       "productionTime": "5 dias"
     },
     {
-      "id": 3,
-      "name": "Girassol Unidade",
-      "price": 15.00,
-      "image": "assets/3.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Um girassol único que traz alegria e energia para qualquer ambiente. Perfeito para decorar mesas de escritório ou dar um toque de cor e vida à sua decoração.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 4,
-      "name": "Tulipa Unidade",
-      "price": 15.00,
-      "image": "assets/4.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Uma tulipa única que traz elegância e charme para qualquer ambiente. Ideal para decorar mesas de escritório ou dar um toque especial à decoração.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 5,
-      "name": "Rosa Unidade",
-      "price": 15.00,
-      "image": "assets/5.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Uma rosa solitária que fala por si. Perfeita para quem busca um presente simples, mas cheio de significado.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 6,
-      "name": "Pérola Unidade",
-      "price": 15.00,
-      "image": "assets/6.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Uma pérola única que brilha com sua própria luz. Ideal para decorar ambientes ou compor arranjos personalizados.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 7,
-      "name": "Caixa coração Ferreiro Rocher",
-      "price": 80.00,
-      "image": "assets/7.jpg",
-      "category": "caixas",
-      "brand": "Girassol",
-      "description": "Uma caixa em formato de coração recheada com os deliciosos chocolates Ferreiro Rocher. O presente perfeito para demonstrar seu amor.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 8,
-      "name": "Caixa e balão + Ferreiro Rocher",
-      "price": 55.00,
-      "image": "assets/8.jpg",
-      "category": "caixas",
-      "brand": "Girassol",
-      "description": "Uma combinação encantadora de chocolates e balão. Ideal para celebrar aniversários e datas especiais com um toque de doçura.",
-      "productionTime": "5 dias"
-    },
-    {
       "id": 9,
-      "name": "Buquê Pérola 2",
-      "price": 100.00,
+      "name": "Buquê Pérola",
+      "price": 120.00,
       "image": "assets/9.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -101,33 +31,23 @@
       "productionTime": "5 dias"
     },
     {
+      "id": 35,
+      "name": "Mini Buquê com Bombom",
+      "price": 35.00,
+      "image": "assets/35.jpg",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Mini buquê delicado acompanhado de bombom. Ideal para um mimo doce e charmoso.",
+      "productionTime": "5 dias"
+    },
+    {
       "id": 11,
       "name": "Buquê Casamento",
-      "price": 120.00,
+      "price": 150.00,
       "image": "assets/11.jpg",
       "category": "buques",
       "brand": "Girassol",
       "description": "Um buquê que carrega toda a magia e romance de um casamento. Perfeito para celebrar o amor e a união.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 12,
-      "name": "Caixa de bombom + Recado e Roto",
-      "price": 80.00,
-      "image": "assets/12.jpg",
-      "category": "caixas",
-      "brand": "Girassol",
-      "description": "Uma caixa especial com chocolates e um recado personalizado. Ideal para expressar seus sentimentos de forma doce e carinhosa.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 13,
-      "name": "Tulipa Brilhante",
-      "price": 50.00,
-      "image": "assets/13.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Uma tulipa que brilha com sua própria luz. Perfeita para decorar ambientes ou compor arranjos especiais.",
       "productionTime": "5 dias"
     },
     {
@@ -143,7 +63,7 @@
     {
       "id": 15,
       "name": "Buquê Cetim Mesclado",
-      "price": 100.00,
+      "price": 130.00,
       "image": "assets/15.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -151,29 +71,9 @@
       "productionTime": "5 dias"
     },
     {
-      "id": 16,
-      "name": "Caixa Bombom Ouro Branco + Bis",
-      "price": 55.00,
-      "image": "assets/16.jpg",
-      "category": "caixas",
-      "brand": "Girassol",
-      "description": "Uma caixa elegante em ouro branco recheada com deliciosos bombons. Ideal para presentear em ocasiões especiais.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 17,
-      "name": "Caixa Girassol + Ferreiro Rocher",
-      "price": 80.00,
-      "image": "assets/17.jpg",
-      "category": "caixas",
-      "brand": "Girassol",
-      "description": "Uma caixa decorada com girassóis e recheada com chocolates Ferreiro Rocher. Perfeita para trazer alegria e doçura a qualquer momento.",
-      "productionTime": "5 dias"
-    },
-    {
       "id": 18,
       "name": "Buquê Coração + Ferreiro Rocher",
-      "price": 130.00,
+      "price": 150.00,
       "image": "assets/18.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -183,7 +83,7 @@
     {
       "id": 19,
       "name": "Buquê Coração",
-      "price": 120.00,
+      "price": 130.00,
       "image": "assets/19.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -193,7 +93,7 @@
     {
       "id": 20,
       "name": "Buquê Ferreiro Rocher",
-      "price": 150.00,
+      "price": 180.00,
       "image": "assets/20.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -202,7 +102,7 @@
     },
     {
       "id": 21,
-      "name": "Buquê Linha das Princesas",
+      "name": "Mini Buquê das Princesas",
       "price": 80.00,
       "image": "assets/21.jpg",
       "category": "buques",
@@ -212,7 +112,7 @@
     },
     {
       "id": 22,
-      "name": "Buquê com 5 Ferreiros Rocher",
+      "name": "Buquê com 5 Ferreiro Rocher",
       "price": 55.00,
       "image": "assets/22.jpg",
       "category": "buques",
@@ -232,28 +132,18 @@
     },
     {
       "id": 24,
-      "name": "Buquê Girassol",
+      "name": "Buquê Girassol Rosado",
       "price": 100.00,
       "image": "assets/24.jpg",
       "category": "buques",
       "brand": "Girassol",
-      "description": "Um buquê que traz toda a energia e alegria dos girassóis. Ideal para iluminar o dia de alguém especial.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 25,
-      "name": "Borboleta com Led ",
-      "price": 55.00,
-      "image": "assets/25.jpg",
-      "category": "unidades",
-      "brand": "Girassol",
-      "description": "Uma borboleta iluminada que traz magia e encanto para qualquer ambiente. Perfeita para decorar e criar um clima especial.",
+      "description": "Um buquê que traz toda a energia e alegria dos girassóis em tons rosados. Ideal para iluminar o dia de alguém especial.",
       "productionTime": "5 dias"
     },
     {
       "id": 26,
       "name": "Buquê Van Gogh",
-      "price": 120.00,
+      "price": 150.00,
       "image": "assets/26.jpg",
       "category": "buques",
       "brand": "Girassol",
@@ -263,21 +153,11 @@
     {
       "id": 27,
       "name": "Buquê Cetim com Glitter",
-      "price": 100.00,
+      "price": 130.00,
       "image": "assets/27.jpg",
       "category": "buques",
       "brand": "Girassol",
       "description": "Um buquê que brilha com o glamour do cetim e glitter. Ideal para ocasiões especiais e momentos de celebração.",
-      "productionTime": "5 dias"
-    },
-    {
-      "id": 28,
-      "name": "Buquê Margaridas",
-      "price": 55.00,
-      "image": "assets/28.jpg",
-      "category": "buques",
-      "brand": "Girassol",
-      "description": "Um buquê delicado de margaridas que traz simplicidade e charme. Perfeito para decorar ambientes descontraídos.",
       "productionTime": "5 dias"
     },
     {
@@ -301,16 +181,6 @@
       "productionTime": "5 dias"
     },
     {
-      "id": 31,
-      "name": "Buquê Divertidamente",
-      "price": 120.00,
-      "image": "assets/31.jpg",
-      "category": "buques",
-      "brand": "Girassol",
-      "description": "Um buquê inspirado no filme Divertidamente, trazendo cores e alegria para celebrar as emoções.",
-      "productionTime": "5 dias"
-    },
-    {
       "id": 32,
       "name": "Dupla Love",
       "price": 150.00,
@@ -321,24 +191,154 @@
       "productionTime": "5 dias"
     },
     {
-      "id": 33,
-      "name": "Buquê Rosas Origame",
-      "price": 55.00,
-      "image": "assets/33.jpg",
-      "category": "buques",
-      "brand": "Girassol",
-      "description": "Um buquê de rosas em origami, unindo arte e delicadeza. Perfeito para quem aprecia trabalhos manuais e criatividade.",
-      "productionTime": "5 dias"
-    },
-    {
       "id": 34,
-      "name": "Rosas Mais Ferreiro Rocher",
+      "name": "Rosas + Ferreiro Rocher",
       "price": 80.00,
       "image": "assets/34.jpg",
       "category": "buques",
       "brand": "Girassol",
       "description": "Um buquê que une a elegância das rosas com a doçura dos chocolates Ferreiro Rocher. Ideal para ocasiões especiais.",
       "productionTime": "5 dias"
+    },
+    {
+      "id": 36,
+      "name": "Buquê Rosas Eternas",
+      "price": 120.00,
+      "image": "assets/36.jpg",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Buquê de rosas eternas que preservam a beleza e o significado por muito mais tempo.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 3,
+      "name": "Girassol Unidade",
+      "price": 20.00,
+      "image": "assets/3.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Um girassol único que traz alegria e energia para qualquer ambiente. Perfeito para decorar mesas de escritório ou dar um toque de cor e vida à sua decoração.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 4,
+      "name": "Tulipa Unidade",
+      "price": 20.00,
+      "image": "assets/4.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Uma tulipa única que traz elegância e charme para qualquer ambiente. Ideal para decorar mesas de escritório ou dar um toque especial à decoração.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 5,
+      "name": "Rosa Unidade",
+      "price": 20.00,
+      "image": "assets/5.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Uma rosa solitária que fala por si. Perfeita para quem busca um presente simples, mas cheio de significado.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 6,
+      "name": "Pérola Unidade",
+      "price": 20.00,
+      "image": "assets/6.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Uma pérola única que brilha com sua própria luz. Ideal para decorar ambientes ou compor arranjos personalizados.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 13,
+      "name": "Tulipa Brilhante",
+      "price": 20.00,
+      "image": "assets/13.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Uma tulipa que brilha com sua própria luz. Perfeita para decorar ambientes ou compor arranjos especiais.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 37,
+      "name": "Flor Unidade com Bombom",
+      "price": 25.00,
+      "image": "assets/37.jpg",
+      "category": "unidades",
+      "brand": "Girassol",
+      "description": "Uma flor única acompanhada de bombom. Presente simples, doce e cheio de carinho.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 25,
+      "name": "Borboleta com LED P (7 borboletas)",
+      "price": 30.00,
+      "image": "assets/25.jpg",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Arranjo com 7 borboletas iluminadas por LED. Perfeito para decorar e criar um clima especial.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 38,
+      "name": "Borboleta com LED M (30 borboletas)",
+      "price": 60.00,
+      "image": "assets/38.jpg",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Arranjo com 30 borboletas iluminadas por LED. Ideal para decorar ambientes com mais presença e brilho.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 39,
+      "name": "Borboleta com LED G (55 borboletas)",
+      "price": 80.00,
+      "image": "assets/39.jpg",
+      "category": "buques",
+      "brand": "Girassol",
+      "description": "Arranjo com 55 borboletas iluminadas por LED. O tamanho ideal para um impacto visual marcante.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 7,
+      "name": "Caixa Coração + Ferreiro Rocher",
+      "price": 80.00,
+      "image": "assets/7.jpg",
+      "category": "caixas",
+      "brand": "Girassol",
+      "description": "Uma caixa em formato de coração recheada com os deliciosos chocolates Ferreiro Rocher. O presente perfeito para demonstrar seu amor.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 8,
+      "name": "Caixa e Balão + Ferreiro Rocher",
+      "price": 55.00,
+      "image": "assets/8.jpg",
+      "category": "caixas",
+      "brand": "Girassol",
+      "description": "Uma combinação encantadora de chocolates e balão. Ideal para celebrar aniversários e datas especiais com um toque de doçura.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 40,
+      "name": "Caixa com Recado e Foto",
+      "price": 60.00,
+      "image": "assets/40.jpg",
+      "category": "caixas",
+      "brand": "Girassol",
+      "description": "Caixa especial com recado e foto personalizada. Perfeita para guardar uma lembrança única.",
+      "productionTime": "5 dias"
+    },
+    {
+      "id": 17,
+      "name": "Caixa Girassol + Ferreiro Rocher",
+      "price": 80.00,
+      "image": "assets/17.jpg",
+      "category": "caixas",
+      "brand": "Girassol",
+      "description": "Uma caixa decorada com girassóis e recheada com chocolates Ferreiro Rocher. Perfeita para trazer alegria e doçura a qualquer momento.",
+      "productionTime": "5 dias"
     }
   ]
-} 
+}

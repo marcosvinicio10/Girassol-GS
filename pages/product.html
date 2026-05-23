@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Detalhes do produto — Girassol GS." />
+    <title>Produto — Girassol GS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=EB+Garamond:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <link rel="stylesheet" href="../assets/css/header-component.css" />
+  </head>
+  <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+    <header-component active="catalog"></header-component>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-12 w-full flex-1">
+      <div id="pdp-root"></div>
+      <div id="pdp-related"></div>
+    </main>
+
+    <footer class="bg-surface-container border-t border-outline-variant/50">
+      <div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+        <div class="space-y-4 text-center md:text-left">
+          <div class="font-headline-md text-headline-md text-secondary">Girassol GS</div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+            © 2026 Girassol GS. Flores que transformam momentos em memórias.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-90 hover:opacity-100" href="https://wa.me/5521964916258" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-90 hover:opacity-100" href="../index.html#catalog">Catálogo</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-90 hover:opacity-100" href="../index.html#contato">Contato</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/header-component.js"></script>
+    <script src="../assets/js/catalog-data.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/pdp.js"></script>
+  </body>
+</html>
